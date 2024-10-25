@@ -4120,10 +4120,6 @@ refl_adj:           IF(REF_10CM(I,J,L)<=DBZmin) THEN
           IF (MODELNAME=='RAPR' .OR. MODELNAME=='FV3R') THEN
            HGT=ZMID(I,J,L)
            PBLHOLD=PBLHGUST(I,J)
-           IF(PBLHOLD == spval) THEN
-             LPBL(I,J) = LM
-             EXIT loopL
-           ENDIF
           ELSE
            HGT=ZINT(I,J,L)
            PBLHOLD=PBLRI(I,J)
